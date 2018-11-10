@@ -1,0 +1,43 @@
+{
+  "name": "are-passive-events-supported",
+  "version": "0.0.0",
+  "description": "Check if the browser supports passive event listeners.",
+  "keywords": [
+  ],
+  "main": "./dist/are-passive-events-supported.cjs.js",
+  "module": "./dist/are-passive-events-supported.esm.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Warning: no test specified\" || jest",
+    "prebuild": "rimraf dist",
+    "build": "rollup -c",
+    "preversion": "npm test",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andarist/are-passive-events-supported.git"
+  },
+  "author": "Mateusz Burzyński <mateuszburzynski@gmail.com> (https://github.com/Andarist)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Andarist/are-passive-events-supported/issues"
+  },
+  "homepage": "https://github.com/Andarist/are-passive-events-supported#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.1.0",
+    "@babel/preset-env": "^7.1.5",
+    "husky": "^1.1.0",
+    "jest": "^23.6.0",
+    "lint-staged": "^8.0.4",
+    "prettier": "^1.15.2",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.67.0",
+    "rollup-plugin-babel": "^4.0.3"
+  },
+  "dependencies": {
+  }
+}
