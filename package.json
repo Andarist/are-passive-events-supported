@@ -1,9 +1,8 @@
 {
   "name": "are-passive-events-supported",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Check if the browser supports passive event listeners.",
-  "keywords": [
-  ],
+  "keywords": [],
   "main": "./dist/are-passive-events-supported.cjs.js",
   "module": "./dist/are-passive-events-supported.esm.js",
   "files": [
@@ -38,6 +37,5 @@
     "rollup": "^0.67.0",
     "rollup-plugin-babel": "^4.0.3"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
