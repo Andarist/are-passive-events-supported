@@ -5,13 +5,17 @@
   "keywords": [],
   "main": "./dist/are-passive-events-supported.cjs.js",
   "module": "./dist/are-passive-events-supported.esm.js",
+  "types": "./types/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "scripts": {
     "test": "echo \"Warning: no test specified\" || jest",
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf dist types",
     "build": "rollup -c",
+    "build:types": "tsc",
+    "postbuild": "npm run build:types",
     "preversion": "npm test",
     "prepare": "npm run build"
   },
@@ -29,13 +33,15 @@
     "@babel/core": "^7.1.5",
     "@babel/plugin-transform-modules-commonjs": "^7.1.0",
     "@babel/preset-env": "^7.1.5",
+    "@babel/preset-typescript": "^7.1.0",
     "husky": "^1.1.0",
     "jest": "^23.6.0",
     "lint-staged": "^8.0.4",
     "prettier": "^1.15.2",
     "rimraf": "^2.6.2",
     "rollup": "^0.67.0",
-    "rollup-plugin-babel": "^4.0.3"
+    "rollup-plugin-babel": "^4.0.3",
+    "typescript": "^3.3.1"
   },
   "dependencies": {}
 }
