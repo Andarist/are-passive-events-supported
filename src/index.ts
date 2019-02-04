@@ -7,9 +7,10 @@ export default function arePassiveEventsSupported(): boolean {
 
   let passive = false
 
-  const options = {
+  const options: AddEventListenerOptions = {
+    // @ts-ignore: this is a temporary object, it doesn't have to return anything
     get passive() {
-      return (passive = true)
+      passive = true
     },
   }
 
