@@ -5,7 +5,7 @@ export default function arePassiveEventsSupported(): boolean {
     return supportsPassiveEvents
   }
 
-  if (window === undefined) {
+  if (typeof window === 'undefined') {
     supportsPassiveEvents = false
     return false
   }
