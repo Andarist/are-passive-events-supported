@@ -1,8 +1,15 @@
+import isBrowser from './isBrowser.macro'
+
 let supportsPassiveEvents: boolean
 
 export default function arePassiveEventsSupported(): boolean {
   if (supportsPassiveEvents !== undefined) {
     return supportsPassiveEvents
+  }
+
+  if (!isBrowser) {
+    supportsPassiveEvents = false
+    return false
   }
 
   let passive = false
