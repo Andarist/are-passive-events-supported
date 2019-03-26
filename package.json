@@ -1,6 +1,6 @@
 {
   "name": "are-passive-events-supported",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Check if the browser supports passive event listeners.",
   "keywords": [],
   "main": "./dist/are-passive-events-supported.cjs.js",
