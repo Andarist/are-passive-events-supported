@@ -5,6 +5,11 @@ export default function arePassiveEventsSupported(): boolean {
     return supportsPassiveEvents
   }
 
+  if (window === undefined) {
+    supportsPassiveEvents = false
+    return false
+  }
+
   let passive = false
 
   const options: AddEventListenerOptions = {
