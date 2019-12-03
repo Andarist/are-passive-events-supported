@@ -23,8 +23,8 @@ export default function arePassiveEventsSupported(): boolean {
 
   const noop = () => {}
 
-  window.addEventListener('t', noop, options)
-  window.removeEventListener('t', noop, options as EventListenerOptions)
+  "undefined" != typeof window && window.addEventListener('t', noop, options)
+  "undefined" != typeof window && window.removeEventListener('t', noop, options as EventListenerOptions)
 
   supportsPassiveEvents = passive
   return passive
